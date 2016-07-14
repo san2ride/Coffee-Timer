@@ -11,37 +11,58 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var label: UILabel!
-    @IBOutlet weak var slider: UISlider!
-    @IBOutlet weak var progressiveView: UIProgressView!
     
+    var timerModel: TimerModel! {
+        willSet(newModel) {
+            print("about to change model to \(newModel)")
+        }
+        
+        didSet {
+            print("set model to \(timerModel)")
+            updateUserInterface()
+        }
+    }
     
+    override func shouldAutorotate() -> Bool {
+        return false
+    }
+    
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
+    func setupModel() {
+        self.timerModel = TimerModel(coffeeName: "Colombian Coffee", duration: 240)
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         print("view is loaded")
-        view.backgroundColor = .orangeColor()
+        
+        setupModel()
+        title = "Root"
+        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    @IBAction func buttonWasPressed(sender: AnyObject) {
-        print("button was pressed")
-        
-        let date = NSDate()
-        
-        label.text = "button was pressed at \(date)"
+    
+    func updateUserInterface() {
         
     }
- 
-    @IBAction func sliderValueChanged(sender: AnyObject) {
-        print("slider value changed to \(self.slider.value)")
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print("preparing for segue with identifier:\(segue.identifier)")
         
-        progressiveView.progress = slider.value
-        
+        if segue.identifier == "pushDetail" {
+            let viewController = segue.destinationViewController as! TimerDetailViewController
+            viewController.timerModel = timerModel
+        }
         
     }
+
 
 }
 
