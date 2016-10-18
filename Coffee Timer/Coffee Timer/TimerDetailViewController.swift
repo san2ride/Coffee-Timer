@@ -18,18 +18,15 @@ class TimerDetailViewController: UIViewController {
     
     var timerModel: TimerModel!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        durationLabel.text = "\(timerModel.duration / 60) min \(timerModel.duration % 60 ) sec"
+        durationLabel.text = "\(timerModel.duration / 60) min \(timerModel.duration % 60) sec"
         
-        title = timerModel.coffeeName
+        title = timerModel.name
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
      
 

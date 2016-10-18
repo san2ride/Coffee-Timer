@@ -7,25 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A4540CB41D4FC03200471E59 /* TimerListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4540CB31D4FC03200471E59 /* TimerListTableViewController.swift */; };
 		A474DDD31D374AE10058D973 /* TimerDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A474DDD21D374AE10058D973 /* TimerDetailViewController.swift */; };
 		A48E00901D2CA92C00720B36 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A48E008F1D2CA92C00720B36 /* TimerModel.swift */; };
 		A4B059A31D2BEAFC00E12B84 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B059A21D2BEAFC00E12B84 /* AppDelegate.swift */; };
-		A4B059A51D2BEAFC00E12B84 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B059A41D2BEAFC00E12B84 /* ViewController.swift */; };
 		A4B059A81D2BEAFC00E12B84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B059A61D2BEAFC00E12B84 /* Main.storyboard */; };
 		A4B059AA1D2BEAFC00E12B84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4B059A91D2BEAFC00E12B84 /* Assets.xcassets */; };
 		A4B059AD1D2BEAFC00E12B84 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4B059AB1D2BEAFC00E12B84 /* LaunchScreen.storyboard */; };
+		A4B0F4501D4BC14700A435B1 /* TimerEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B0F44F1D4BC14700A435B1 /* TimerEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A4540CB31D4FC03200471E59 /* TimerListTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerListTableViewController.swift; path = ../TimerListTableViewController.swift; sourceTree = "<group>"; };
 		A474DDD21D374AE10058D973 /* TimerDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerDetailViewController.swift; sourceTree = "<group>"; };
 		A48E008F1D2CA92C00720B36 /* TimerModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
 		A4B0599F1D2BEAFB00E12B84 /* Coffee Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Coffee Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4B059A21D2BEAFC00E12B84 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		A4B059A41D2BEAFC00E12B84 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A4B059A71D2BEAFC00E12B84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A4B059A91D2BEAFC00E12B84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4B059AC1D2BEAFC00E12B84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A4B059AE1D2BEAFC00E12B84 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4B0F44F1D4BC14700A435B1 /* TimerEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,49 @@
 		A4B059A11D2BEAFC00E12B84 /* Coffee Timer */ = {
 			isa = PBXGroup;
 			children = (
-				A4B059A21D2BEAFC00E12B84 /* AppDelegate.swift */,
-				A4B059A41D2BEAFC00E12B84 /* ViewController.swift */,
 				A4B059A61D2BEAFC00E12B84 /* Main.storyboard */,
+				A4B0F44C1D4BB96300A435B1 /* Models */,
+				A4B0F44E1D4BB9AD00A435B1 /* Views */,
+				A4B0F44B1D4BB94E00A435B1 /* Controllers */,
+				A4B0F44D1D4BB97900A435B1 /* Supporting Files */,
+			);
+			path = "Coffee Timer";
+			sourceTree = "<group>";
+		};
+		A4B0F44B1D4BB94E00A435B1 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A4B0F44F1D4BC14700A435B1 /* TimerEditViewController.swift */,
 				A474DDD21D374AE10058D973 /* TimerDetailViewController.swift */,
+				A4540CB31D4FC03200471E59 /* TimerListTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		A4B0F44C1D4BB96300A435B1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
 				A48E008F1D2CA92C00720B36 /* TimerModel.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		A4B0F44D1D4BB97900A435B1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A4B059A21D2BEAFC00E12B84 /* AppDelegate.swift */,
 				A4B059A91D2BEAFC00E12B84 /* Assets.xcassets */,
 				A4B059AB1D2BEAFC00E12B84 /* LaunchScreen.storyboard */,
 				A4B059AE1D2BEAFC00E12B84 /* Info.plist */,
 			);
-			path = "Coffee Timer";
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A4B0F44E1D4BB9AD00A435B1 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,6 +138,7 @@
 					A4B0599E1D2BEAFB00E12B84 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = 7QLQZLZHA6;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -143,8 +179,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				A48E00901D2CA92C00720B36 /* TimerModel.swift in Sources */,
+				A4B0F4501D4BC14700A435B1 /* TimerEditViewController.swift in Sources */,
 				A474DDD31D374AE10058D973 /* TimerDetailViewController.swift in Sources */,
-				A4B059A51D2BEAFC00E12B84 /* ViewController.swift in Sources */,
+				A4540CB41D4FC03200471E59 /* TimerListTableViewController.swift in Sources */,
 				A4B059A31D2BEAFC00E12B84 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +300,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jsanchezrides.Coffee-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -275,6 +313,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.jsanchezrides.Coffee-Timer";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

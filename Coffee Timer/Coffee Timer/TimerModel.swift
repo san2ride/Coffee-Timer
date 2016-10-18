@@ -10,19 +10,26 @@ import Foundation
 
 class TimerModel: NSObject {
     
-    var coffeeName = ""
+    var name = ""
     var duration = 0
+    var type = TimerType.coffee
     
-    init(coffeeName: String, duration: Int) {
-        self.coffeeName = coffeeName
+    enum TimerType {
+        case coffee
+        case tea
+    }
+    
+    init(name: String, duration: Int, type: TimerType) {
+        self.name = name
         self.duration = duration
+        self.type = type
         super.init()
     }
     
     override var description: String {
-        get {
-            return "TimerModel(\(coffeeName))"
-        }
+        return "TimerModel(\(name))"
     }
+    
+    
 
 }
